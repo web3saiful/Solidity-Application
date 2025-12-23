@@ -34,6 +34,12 @@ contract SimpleIterableMap {
         return users[index];
     }
 
+    // 🔹 Get user address and their value at a specific index
+    function getUserAndValue(uint index) public view returns (address, uint256) {
+        require(index < users.length, "Index out of bounds");
+        address user = users[index];// 0x233r324...12
+        return (user, userValue[user]);
+    }
 
 
  
