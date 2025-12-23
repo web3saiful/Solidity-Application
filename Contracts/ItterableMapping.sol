@@ -56,5 +56,21 @@ contract SimpleIterableMap {
         return (addresses, values);
     }
 
- 
+    // // 🔹 Remove the user from map and user list (optional but shows complete control)
+    // function removeMyEntry() public {
+    //     require(hasAdded[msg.sender], "No value set yet");
+
+    //     // Reset value
+    //     userValue[msg.sender] = 0;
+    //     hasAdded[msg.sender] = false;
+
+    //     // Remove from array by swapping with last and popping
+    //     for (uint256 i = 0; i < users.length; i++) {
+    //         if (users[i] == msg.sender) {
+    //             users[i] = users[users.length - 1];
+    //             users.pop();
+    //             break;
+    //         }
+    //     }
+    // }
 }
