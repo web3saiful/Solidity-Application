@@ -23,7 +23,16 @@ contract SimpleIterableMap {
     }
 
 
+    // 🔹 Get the total number of users who have added data
+    function getUserCount() public view returns (uint256) {
+        return users.length;
+    }
 
+    // 🔹 Get a user's address by their index in the array
+    function getUserAtIndex(uint index) public view returns (address) {
+        require(index < users.length, "Index out of bounds");
+        return users[index];
+    }
 
 
 
