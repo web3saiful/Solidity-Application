@@ -41,6 +41,20 @@ contract SimpleIterableMap {
         return (user, userValue[user]);
     }
 
+    // 🔹 Get all users and their values (for frontend/display use)
+    function getAll() public view returns (address[] memory, uint256[] memory) {
+        uint256 len = users.length;
+        address[] memory addresses = new address[](len);
+        uint256[] memory values = new uint256[](len);
+
+        for (uint256 i = 0; i < len; i++) {
+            address user = users[i];//0x12324..123123
+            addresses[i] = user;
+            values[i] = userValue[user];
+        }
+
+        return (addresses, values);
+    }
 
  
 }
