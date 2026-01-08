@@ -90,16 +90,16 @@ contract ERC721 is IERC721 {
         emit ApprovalForAll(msg.sender, operator, approved);
     }
 
-    function approve(address spender, uint256 id) external {
+    function approve(address spender, uint256 id) external {          
         address owner = _ownerOf[id];
         require(
             msg.sender == owner || isApprovedForAll[owner][msg.sender],
             "not authorized"
         );
-
+     
         _approvals[id] = spender;
 
-        emit Approval(owner, spender, id);
+        emit Approval(owner, spender, id);    
     }
 
     function getApproved(uint256 id) external view returns (address) {
@@ -124,7 +124,7 @@ contract ERC721 is IERC721 {
 
         require(_isApprovedOrOwner(from, msg.sender, id), "not authorized");
 
-        _balanceOf[from]--;
+        _balanceOf[from]--; 
         _balanceOf[to]++;
         _ownerOf[id] = to;
 
@@ -162,7 +162,7 @@ contract ERC721 is IERC721 {
 
     function _mint(address to, uint256 id) internal {
         require(to != address(0), "mint to zero address");
-        require(_ownerOf[id] == address(0), "already minted");
+        require(_ownerOf[id] == address(0), "already minted");    
 
         _balanceOf[to]++;
         _ownerOf[id] = to;
@@ -172,7 +172,7 @@ contract ERC721 is IERC721 {
 
     function _burn(uint256 id) internal {
         address owner = _ownerOf[id];
-        require(owner != address(0), "not minted");
+        require(owner != address(0), "not minted");  
 
         _balanceOf[owner] -= 1;
 
