@@ -32,13 +32,15 @@ contract HappyNft is ERC721, ERC721URIStorage, Ownable{
 
 
      function tokenURI(uint256 tokenId)
-        public 
+        public
         view
         override(ERC721, ERC721URIStorage)
         returns (string memory)
     {
         return super.tokenURI(tokenId);
     }
+
+    
     function supportsInterface(bytes4 interfaceId)
         public
         view
@@ -47,6 +49,4 @@ contract HappyNft is ERC721, ERC721URIStorage, Ownable{
     {
         return super.supportsInterface(interfaceId);
     }
-
-
 }

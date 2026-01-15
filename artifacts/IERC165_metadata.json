@@ -9,7 +9,7 @@
 				"inputs": [
 					{
 						"internalType": "bytes4",
-						"name": "interfaceID",
+						"name": "interfaceId",
 						"type": "bytes4"
 					}
 				],
@@ -26,8 +26,13 @@
 			}
 		],
 		"devdoc": {
+			"details": "Interface of the ERC-165 standard, as defined in the https://eips.ethereum.org/EIPS/eip-165[ERC]. Implementers can declare support of contract interfaces, which can then be queried by others ({ERC165Checker}). For an implementation, see {ERC165}.",
 			"kind": "dev",
-			"methods": {},
+			"methods": {
+				"supportsInterface(bytes4)": {
+					"details": "Returns true if this contract implements the interface defined by `interfaceId`. See the corresponding https://eips.ethereum.org/EIPS/eip-165#how-interfaces-are-identified[ERC section] to learn more about how these ids are created. This function call must use less than 30 000 gas."
+				}
+			},
 			"version": 1
 		},
 		"userdoc": {
@@ -38,7 +43,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"Contracts/ERC721.sol": "IERC165"
+			".deps/npm/@openzeppelin/contracts/utils/introspection/IERC165.sol": "IERC165"
 		},
 		"evmVersion": "prague",
 		"libraries": {},
@@ -52,12 +57,12 @@
 		"remappings": []
 	},
 	"sources": {
-		"Contracts/ERC721.sol": {
-			"keccak256": "0x25b0ff6238668f8a6303b5eaeecee446d1de2dc409b06186d419c88b1ed73521",
+		".deps/npm/@openzeppelin/contracts/utils/introspection/IERC165.sol": {
+			"keccak256": "0x8891738ffe910f0cf2da09566928589bf5d63f4524dd734fd9cedbac3274dd5c",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://b077e7f5f0cfb1c09e087af640545c96f8610d203f67afd4ffb225eb7315da61",
-				"dweb:/ipfs/QmXTi3gfCmnrEY2CFj26rLyv1eaG7cvPuDYhjt3F8np1YB"
+				"bzz-raw://971f954442df5c2ef5b5ebf1eb245d7105d9fbacc7386ee5c796df1d45b21617",
+				"dweb:/ipfs/QmadRjHbkicwqwwh61raUEapaVEtaLMcYbQZWs9gUkgj3u"
 			]
 		}
 	},
